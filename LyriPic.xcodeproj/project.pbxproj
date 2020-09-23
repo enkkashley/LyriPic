@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253F0E6251BC1DF00C89C9D /* HeaderView.swift */; };
+		328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C270725192B8400C61770 /* LyriPicCardView.swift */; };
+		32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B857AC251BFCDE000730B3 /* TrackCellView.swift */; };
 		32E9EBAB25190F09000789CB /* LyriPicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9EBAA25190F09000789CB /* LyriPicApp.swift */; };
-		32E9EBAD25190F09000789CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9EBAC25190F09000789CB /* ContentView.swift */; };
+		32E9EBAD25190F09000789CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9EBAC25190F09000789CB /* HomeView.swift */; };
 		32E9EBAF25190F0C000789CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9EBAE25190F0C000789CB /* Assets.xcassets */; };
 		32E9EBB225190F0C000789CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9EBB125190F0C000789CB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3253F0E6251BC1DF00C89C9D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		328C270725192B8400C61770 /* LyriPicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCardView.swift; sourceTree = "<group>"; };
+		32B857AC251BFCDE000730B3 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 		32E9EBA725190F08000789CB /* LyriPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyriPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E9EBAA25190F09000789CB /* LyriPicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicApp.swift; sourceTree = "<group>"; };
-		32E9EBAC25190F09000789CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		32E9EBAC25190F09000789CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		32E9EBAE25190F0C000789CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E9EBB125190F0C000789CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32E9EBB325190F0C000789CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3253F0E5251BC1A300C89C9D /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				32E9EBAC25190F09000789CB /* HomeView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		3253F0EA251BC34000C89C9D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				328C270725192B8400C61770 /* LyriPicCardView.swift */,
+				3253F0E6251BC1DF00C89C9D /* HeaderView.swift */,
+				32B857AC251BFCDE000730B3 /* TrackCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		328C270625192B6500C61770 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3253F0EA251BC34000C89C9D /* Components */,
+				3253F0E5251BC1A300C89C9D /* Tab */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		32E9EB9E25190F08000789CB = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				32E9EBAA25190F09000789CB /* LyriPicApp.swift */,
-				32E9EBAC25190F09000789CB /* ContentView.swift */,
+				328C270625192B6500C61770 /* Views */,
 				32E9EBAE25190F0C000789CB /* Assets.xcassets */,
 				32E9EBB325190F0C000789CB /* Info.plist */,
 				32E9EBB025190F0C000789CB /* Preview Content */,
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E9EBAD25190F09000789CB /* ContentView.swift in Sources */,
+				32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */,
+				32E9EBAD25190F09000789CB /* HomeView.swift in Sources */,
 				32E9EBAB25190F09000789CB /* LyriPicApp.swift in Sources */,
+				328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */,
+				3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
