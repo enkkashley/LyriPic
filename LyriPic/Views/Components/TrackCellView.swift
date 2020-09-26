@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct TrackCellView: View {
+    let id: Int
+    let track: Track
+    
     var body: some View {
         HStack(spacing: 11) {
-            Text("1.")
-                .fontWeight(.light)
+            VStack(alignment: .trailing) {
+                Text("\(id + 1)")
+                    .font(.system(size: 12))
+                    .fontWeight(.light)
+            }
+            .frame(width: 20)
+            
             
             HStack {
                 Color.gray
@@ -19,10 +27,10 @@ struct TrackCellView: View {
                     .cornerRadius(4)
                 
                 VStack(alignment: .leading) {
-                    Text("Behold (Then Sings My Soul)")
+                    Text(track.track.trackName)
                         .font(.system(size: 13))
                         .bold()
-                    Text("Hillsong UNITED")
+                    Text(track.track.artistName)
                         .font(.system(size: 13))
                 }
             }
@@ -34,6 +42,6 @@ struct TrackCellView: View {
 
 struct TrackCellView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackCellView()
+        TrackCellView(id: 0, track: Track(track: TrackInfo(trackId: 1, trackName: "Behold (Then Sings My Soul)", artistName: "Hillsong UNITED")))
     }
 }

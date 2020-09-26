@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct HomeView: View { 
+struct HomeView: View {
+    @ObservedObject var topTracks = TopTracksViewModel()
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 30) {
@@ -28,13 +30,16 @@ struct HomeView: View {
                 HeaderView(title: "Tracks", subtitle: "Create LyriPics from top tracks in your country")
                     .padding(.leading, 20)
                 
-                
-                VStack(spacing: 10) {
-                    ForEach(0 ..< 10) { item in
-                        TrackCellView()
-                            .padding(.horizontal, 20)
-                        Divider()
+                if topTracks.error == nil {
+                    VStack(spacing: 10) {
+                        ForEach(topTracks.tracks.indices, id: \.self) { index in
+                            TrackCellView(id: index, track: topTracks.tracks[index])
+                                .padding(.horizontal, 20)
+                            Divider()
+                        }
                     }
+                } else {
+                    // handle error
                 }
                 
             }
