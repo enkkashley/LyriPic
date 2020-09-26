@@ -84,23 +84,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		32AE6C5B251E5FFE00AB4362 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				32D1EE01251F533000426BC7 /* Network */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
-		32D1EE01251F533000426BC7 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				32D1EDFE251EB88100426BC7 /* NetworkManager.swift */,
-				32D1EE02251F536C00426BC7 /* Endpoint.swift */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
 		32D1EE05251F53D400426BC7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +112,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		32D1EE20251FF59900426BC7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				32D1EE21251FF5AC00426BC7 /* Network */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		32D1EE21251FF5AC00426BC7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				32D1EDFE251EB88100426BC7 /* NetworkManager.swift */,
+				32D1EE02251F536C00426BC7 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		32E9EB9E25190F08000789CB = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +150,7 @@
 			children = (
 				32E9EBAA25190F09000789CB /* LyriPicApp.swift */,
 				32D1EE05251F53D400426BC7 /* Utilities */,
-				32AE6C5B251E5FFE00AB4362 /* Manager */,
+				32D1EE20251FF59900426BC7 /* Manager */,
 				32D1EE0E251FB29800426BC7 /* Model */,
 				32D1EE1C251FBF7600426BC7 /* ViewModel */,
 				328C270625192B6500C61770 /* Views */,
