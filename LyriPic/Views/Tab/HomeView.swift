@@ -9,6 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var topTracks = TopTracksViewModel()
+    @ObservedObject var lyricsViewModel = LyricsViewModel()
+    
+    func getLyriPicCards() {
+        lyricsViewModel.tracks = topTracks.tracks
+        lyricsViewModel.getLyricsAndSlice()
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -18,10 +24,10 @@ struct HomeView: View {
                     .padding(.leading, 20)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        if topTracks.error == nil {
-                            ForEach(topTracks.tracks) { track in
-                                LyriPicCardView(track: track)
+                    LazyHStack(spacing: 20) {
+                        if lyricsViewModel.error == nil && !lyricsViewModel.lyriPicCards.isEmpty {
+                            ForEach(lyricsViewModel.lyriPicCards) { lyriPic in
+                                LyriPicCardView(lyriPic: lyriPic)
                             }
                         } else {
                             // handle error
@@ -34,16 +40,19 @@ struct HomeView: View {
                 HeaderView(title: "Tracks", subtitle: "Create LyriPics from top tracks in your country")
                     .padding(.leading, 20)
                 
-                VStack(spacing: 10) {
-                    if topTracks.error == nil && !topTracks.tracks.isEmpty {
+                if topTracks.error == nil && !topTracks.tracks.isEmpty {
+                    VStack(spacing: 10) {
                         ForEach(topTracks.tracks.indices, id: \.self) { index in
                             TrackCellView(id: index, track: topTracks.tracks[index])
                                 .padding(.horizontal, 20)
                             Divider()
                         }
-                    } else {
-                        // handle error
                     }
+                    .onAppear {
+                        getLyriPicCards()
+                    }
+                } else {
+                    // handle error
                 }
             }
         }
