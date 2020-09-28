@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253F0E6251BC1DF00C89C9D /* HeaderView.swift */; };
+		326DE46C25214F8000CBBC54 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE46B25214F8000CBBC54 /* Lyrics.swift */; };
+		326DE46F25214FF100CBBC54 /* TrackLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE46E25214FF100CBBC54 /* TrackLyrics.swift */; };
+		326DE4722521502800CBBC54 /* TrackLyricsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */; };
+		326DE475252158A300CBBC54 /* LyricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE474252158A300CBBC54 /* LyricsViewModel.swift */; };
 		328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C270725192B8400C61770 /* LyriPicCardView.swift */; };
 		32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B857AC251BFCDE000730B3 /* TrackCellView.swift */; };
 		32D1EDFF251EB88100426BC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1EDFE251EB88100426BC7 /* NetworkManager.swift */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		3253F0E6251BC1DF00C89C9D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		326DE46B25214F8000CBBC54 /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		326DE46E25214FF100CBBC54 /* TrackLyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLyrics.swift; sourceTree = "<group>"; };
+		326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLyricsInfo.swift; sourceTree = "<group>"; };
+		326DE474252158A300CBBC54 /* LyricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewModel.swift; sourceTree = "<group>"; };
 		328C270725192B8400C61770 /* LyriPicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCardView.swift; sourceTree = "<group>"; };
 		32B857AC251BFCDE000730B3 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 		32D1EDFE251EB88100426BC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -100,6 +108,9 @@
 				32D1EE13251FB60F00426BC7 /* TrackList.swift */,
 				32D1EE16251FB64100426BC7 /* Track.swift */,
 				32D1EE19251FB67600426BC7 /* TrackInfo.swift */,
+				326DE46B25214F8000CBBC54 /* Lyrics.swift */,
+				326DE46E25214FF100CBBC54 /* TrackLyrics.swift */,
+				326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				32D1EE1D251FBFBD00426BC7 /* TopTracksViewModel.swift */,
+				326DE474252158A300CBBC54 /* LyricsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,9 +256,13 @@
 				32E9EBAD25190F09000789CB /* HomeView.swift in Sources */,
 				32E9EBAB25190F09000789CB /* LyriPicApp.swift in Sources */,
 				32D1EE1A251FB67600426BC7 /* TrackInfo.swift in Sources */,
+				326DE46C25214F8000CBBC54 /* Lyrics.swift in Sources */,
+				326DE46F25214FF100CBBC54 /* TrackLyrics.swift in Sources */,
 				328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */,
+				326DE4722521502800CBBC54 /* TrackLyricsInfo.swift in Sources */,
 				3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */,
 				32D1EE1E251FBFBD00426BC7 /* TopTracksViewModel.swift in Sources */,
+				326DE475252158A300CBBC54 /* LyricsViewModel.swift in Sources */,
 				32D1EE14251FB60F00426BC7 /* TrackList.swift in Sources */,
 				32D1EE10251FB31400426BC7 /* TopTracks.swift in Sources */,
 				32D1EE0B251FB14C00426BC7 /* NetworkError.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Track: Decodable {
+struct Track: Identifiable, Decodable {
+    let id = UUID()
     let track: TrackInfo
 }

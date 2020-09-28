@@ -38,4 +38,11 @@ extension Endpoint {
             URLQueryItem(name: "apikey", value: Constants.apiKey)
         ])
     }
+    
+    static func trackLyrics(trackId: Int) -> Self {
+        Endpoint(path: "track.lyrics.get", queryItems: [
+            URLQueryItem(name: "track_id", value: "\(trackId)"),
+            URLQueryItem(name: "apikey", value: Constants.apiKey)
+        ])
+    }
 }

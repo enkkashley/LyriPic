@@ -43,4 +43,37 @@ class NetworkManager {
         }
         .resume()
     }
+    
+    func getTrackLyrics(trackId: Int, completion: @escaping (Result<Lyrics, NetworkError>) -> Void) {
+        let endpoint = Endpoint.trackLyrics(trackId: trackId)
+        
+        URLSession.shared.dataTask(with: endpoint.url) { data, response, error in
+            if error != nil {
+                completion(.failure(.unableToSendRequest))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200  else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                let lyrics = try decoder.decode(Lyrics.self, from: data)
+                completion(.success(lyrics))
+            } catch {
+                completion(.failure(.unableToDecode))
+            }
+            
+        }
+        .resume()
+    }
 }

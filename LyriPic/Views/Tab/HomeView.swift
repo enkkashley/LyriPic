@@ -19,8 +19,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                            LyriPicCardView()
+                        if topTracks.error == nil {
+                            ForEach(topTracks.tracks) { track in
+                                LyriPicCardView(track: track)
+                            }
+                        } else {
+                            // handle error
                         }
                     }
                     .padding(.bottom, 20)
@@ -30,18 +34,17 @@ struct HomeView: View {
                 HeaderView(title: "Tracks", subtitle: "Create LyriPics from top tracks in your country")
                     .padding(.leading, 20)
                 
-                if topTracks.error == nil {
-                    VStack(spacing: 10) {
+                VStack(spacing: 10) {
+                    if topTracks.error == nil && !topTracks.tracks.isEmpty {
                         ForEach(topTracks.tracks.indices, id: \.self) { index in
                             TrackCellView(id: index, track: topTracks.tracks[index])
                                 .padding(.horizontal, 20)
                             Divider()
                         }
+                    } else {
+                        // handle error
                     }
-                } else {
-                    // handle error
                 }
-                
             }
         }
     }

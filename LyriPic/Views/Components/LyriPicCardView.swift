@@ -8,25 +8,30 @@
 import SwiftUI
 
 struct LyriPicCardView: View {
+    let track: Track
+    
+    @ObservedObject var lyricsViewModel = LyricsViewModel()
+    
+    init(track: Track) {
+        self.track = track
+        lyricsViewModel.getTrackLyrics(trackId: track.track.trackId)
+    }
+    
     var body: some View {
         VStack {
-            Text("""
-You turn graves into gardens
-You turn bones into armies
-You turn seas into highways
-
-You are the only one who can
-""")
-                .font(.system(.body, design: .serif))
-                .foregroundColor(.white)
+            if lyricsViewModel.error == nil && lyricsViewModel.lyrics != nil {
+                Text(lyricsViewModel.lyrics!.message.body.lyrics.lyricsBody)
+                    .font(.system(.body, design: .serif))
+                    .foregroundColor(.white)
+            }
             
             Spacer()
             
             HStack {
                 Spacer()
                 VStack(alignment: .leading) {
-                    Text("Graves Into Gardens,")
-                    Text("Elevation Worship")
+                    Text("\(track.track.trackName),")
+                    Text(track.track.artistName)
                         .bold()
                 }
                 .font(.system(size: 15, weight: .regular, design: .serif))
@@ -45,6 +50,6 @@ You are the only one who can
 
 struct LyriPicCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LyriPicCardView()
+        LyriPicCardView(track: Track(track: TrackInfo(trackId: 2, trackName: "Graves Into Gardens", artistName: "Elevation Worship")))
     }
 }
