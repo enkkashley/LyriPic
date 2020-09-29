@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct LyriPicCardView: View {
+    @State private var isPresented = false
+    
     let lyriPic: LyriPicCard
     
     var body: some View {
         VStack {
             Text(lyriPic.lyrics)
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .default))
                 .foregroundColor(.white)
                 .frame(width: 240, alignment: .leading)
             
@@ -26,7 +28,7 @@ struct LyriPicCardView: View {
                     Text(lyriPic.track.artistName)
                         .bold()
                 }
-                .font(.system(size: 15, weight: .regular, design: .serif))
+                .font(.system(size: 15, weight: .regular, design: .default))
                 .foregroundColor(.white)
             }
         }
@@ -37,6 +39,12 @@ struct LyriPicCardView: View {
         .background(Color(#colorLiteral(red: 1, green: 0.737254902, blue: 0.01960784314, alpha: 1)))
         .cornerRadius(17)
         .shadow(color: Color(#colorLiteral(red: 1, green: 0.737254902, blue: 0.01960784314, alpha: 1)).opacity(0.2), radius: 4, x: 0, y: 5)
+        .onTapGesture {
+            isPresented.toggle()
+        }
+        .fullScreenCover(isPresented: $isPresented) {
+            LyriPicModalView(lyriPic: lyriPic)
+        }
     }
 }
 

@@ -13,6 +13,7 @@
 		326DE4722521502800CBBC54 /* TrackLyricsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */; };
 		326DE475252158A300CBBC54 /* LyricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE474252158A300CBBC54 /* LyricsViewModel.swift */; };
 		326DE47C2522509300CBBC54 /* LyriPicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE47B2522509300CBBC54 /* LyriPicCard.swift */; };
+		326DE4802523BAB400CBBC54 /* LyriPicModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */; };
 		328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C270725192B8400C61770 /* LyriPicCardView.swift */; };
 		32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B857AC251BFCDE000730B3 /* TrackCellView.swift */; };
 		32D1EDFF251EB88100426BC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1EDFE251EB88100426BC7 /* NetworkManager.swift */; };
@@ -37,6 +38,7 @@
 		326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLyricsInfo.swift; sourceTree = "<group>"; };
 		326DE474252158A300CBBC54 /* LyricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewModel.swift; sourceTree = "<group>"; };
 		326DE47B2522509300CBBC54 /* LyriPicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCard.swift; sourceTree = "<group>"; };
+		326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicModalView.swift; sourceTree = "<group>"; };
 		328C270725192B8400C61770 /* LyriPicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCardView.swift; sourceTree = "<group>"; };
 		32B857AC251BFCDE000730B3 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 		32D1EDFE251EB88100426BC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				3253F0EA251BC34000C89C9D /* Components */,
 				3253F0E5251BC1A300C89C9D /* Tab */,
+				326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */,
 				32E9EBAD25190F09000789CB /* HomeView.swift in Sources */,
 				32E9EBAB25190F09000789CB /* LyriPicApp.swift in Sources */,
+				326DE4802523BAB400CBBC54 /* LyriPicModalView.swift in Sources */,
 				326DE47C2522509300CBBC54 /* LyriPicCard.swift in Sources */,
 				32D1EE1A251FB67600426BC7 /* TrackInfo.swift in Sources */,
 				326DE46C25214F8000CBBC54 /* Lyrics.swift in Sources */,
