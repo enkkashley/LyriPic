@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32085DBE255AF2C3004816C3 /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32085DBD255AF2C3004816C3 /* SearchTrack.swift */; };
+		32085DC2255C5A09004816C3 /* SearchTrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32085DC1255C5A08004816C3 /* SearchTrackViewModel.swift */; };
+		321865572559CE48000955B0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321865562559CE48000955B0 /* SearchBar.swift */; };
+		323F8CB0255AB6C80056472F /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F8CAF255AB6C80056472F /* SearchController.swift */; };
 		3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253F0E6251BC1DF00C89C9D /* HeaderView.swift */; };
 		326DE46C25214F8000CBBC54 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE46B25214F8000CBBC54 /* Lyrics.swift */; };
 		326DE46F25214FF100CBBC54 /* TrackLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE46E25214FF100CBBC54 /* TrackLyrics.swift */; };
@@ -29,9 +33,15 @@
 		32E9EBAD25190F09000789CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E9EBAC25190F09000789CB /* HomeView.swift */; };
 		32E9EBAF25190F0C000789CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9EBAE25190F0C000789CB /* Assets.xcassets */; };
 		32E9EBB225190F0C000789CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E9EBB125190F0C000789CB /* Preview Assets.xcassets */; };
+		32FCE19B2559C530006ED89E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FCE19A2559C530006ED89E /* SearchView.swift */; };
+		32FCE19E2559C6EE006ED89E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FCE19D2559C6EE006ED89E /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32085DBD255AF2C3004816C3 /* SearchTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrack.swift; sourceTree = "<group>"; };
+		32085DC1255C5A08004816C3 /* SearchTrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrackViewModel.swift; sourceTree = "<group>"; };
+		321865562559CE48000955B0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		323F8CAF255AB6C80056472F /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		3253F0E6251BC1DF00C89C9D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		326DE46B25214F8000CBBC54 /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
 		326DE46E25214FF100CBBC54 /* TrackLyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLyrics.swift; sourceTree = "<group>"; };
@@ -56,6 +66,8 @@
 		32E9EBAE25190F0C000789CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E9EBB125190F0C000789CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32E9EBB325190F0C000789CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32FCE19A2559C530006ED89E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		32FCE19D2559C6EE006ED89E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +81,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321865552559CE19000955B0 /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				323F8CAF255AB6C80056472F /* SearchController.swift */,
+				321865562559CE48000955B0 /* SearchBar.swift */,
+			);
+			path = Representables;
+			sourceTree = "<group>";
+		};
 		3253F0E5251BC1A300C89C9D /* Tab */ = {
 			isa = PBXGroup;
 			children = (
 				32E9EBAC25190F09000789CB /* HomeView.swift */,
+				32FCE19A2559C530006ED89E /* SearchView.swift */,
+				32FCE19D2559C6EE006ED89E /* TabBar.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -83,6 +106,7 @@
 				328C270725192B8400C61770 /* LyriPicCardView.swift */,
 				3253F0E6251BC1DF00C89C9D /* HeaderView.swift */,
 				32B857AC251BFCDE000730B3 /* TrackCellView.swift */,
+				326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -90,9 +114,9 @@
 		328C270625192B6500C61770 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				321865552559CE19000955B0 /* Representables */,
 				3253F0EA251BC34000C89C9D /* Components */,
 				3253F0E5251BC1A300C89C9D /* Tab */,
-				326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				32D1EE0F251FB31400426BC7 /* TopTracks.swift */,
+				32085DBD255AF2C3004816C3 /* SearchTrack.swift */,
 				32D1EE13251FB60F00426BC7 /* TrackList.swift */,
 				32D1EE16251FB64100426BC7 /* Track.swift */,
 				32D1EE19251FB67600426BC7 /* TrackInfo.swift */,
@@ -126,6 +151,7 @@
 			children = (
 				32D1EE1D251FBFBD00426BC7 /* TopTracksViewModel.swift */,
 				326DE474252158A300CBBC54 /* LyricsViewModel.swift */,
+				32085DC1255C5A08004816C3 /* SearchTrackViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FCE19E2559C6EE006ED89E /* TabBar.swift in Sources */,
 				32D1EE03251F536D00426BC7 /* Endpoint.swift in Sources */,
 				32D1EDFF251EB88100426BC7 /* NetworkManager.swift in Sources */,
 				32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */,
@@ -266,12 +293,17 @@
 				32D1EE1A251FB67600426BC7 /* TrackInfo.swift in Sources */,
 				326DE46C25214F8000CBBC54 /* Lyrics.swift in Sources */,
 				326DE46F25214FF100CBBC54 /* TrackLyrics.swift in Sources */,
+				32FCE19B2559C530006ED89E /* SearchView.swift in Sources */,
 				328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */,
 				326DE4722521502800CBBC54 /* TrackLyricsInfo.swift in Sources */,
 				3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */,
 				32D1EE1E251FBFBD00426BC7 /* TopTracksViewModel.swift in Sources */,
+				321865572559CE48000955B0 /* SearchBar.swift in Sources */,
+				32085DBE255AF2C3004816C3 /* SearchTrack.swift in Sources */,
 				326DE475252158A300CBBC54 /* LyricsViewModel.swift in Sources */,
 				32D1EE14251FB60F00426BC7 /* TrackList.swift in Sources */,
+				323F8CB0255AB6C80056472F /* SearchController.swift in Sources */,
+				32085DC2255C5A09004816C3 /* SearchTrackViewModel.swift in Sources */,
 				32D1EE10251FB31400426BC7 /* TopTracks.swift in Sources */,
 				32D1EE0B251FB14C00426BC7 /* NetworkError.swift in Sources */,
 				32D1EE07251F53E900426BC7 /* Constants.swift in Sources */,

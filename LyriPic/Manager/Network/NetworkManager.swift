@@ -76,4 +76,37 @@ class NetworkManager {
         }
         .resume()
     }
+    
+    func searchTracks(query: String, page: Int, completion: @escaping (Result<SearchTrack, NetworkError>) -> Void) {
+        let endpoint = Endpoint.searchTracks(query: query, page: page)
+        
+        URLSession.shared.dataTask(with: endpoint.url) { data, response, error in
+            if error != nil {
+                completion(.failure(.unableToSendRequest))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200  else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                let tracks = try decoder.decode(SearchTrack.self, from: data)
+                completion(.success(tracks))
+            } catch {
+                completion(.failure(.unableToDecode))
+            }
+            
+        }
+        .resume()
+    }
 }

@@ -10,12 +10,37 @@ import SwiftUI
 struct LyriPicModalView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @State var backgroundColor = Color(#colorLiteral(red: 1, green: 0.737254902, blue: 0.01960784314, alpha: 1))
+   
     let lyriPic: LyriPicCard
     
     var body: some View {
         VStack {
             HStack(spacing: 14) {
+                //Dismiss Button
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .renderingMode(.original)
+                        .font(.system(size: 20))
+                }
+                
                 Spacer()
+                
+                // Change Font Button
+                Button {
+                    print("Change Font")
+                } label: {
+                    Image(systemName: "textformat.size")
+                        .renderingMode(.original)
+                        .font(.system(size: 20))
+                }
+                
+                // Color Picker (Background)
+                ColorPicker("", selection: $backgroundColor, supportsOpacity: false)
+                    .frame(width: 30,height: 30)
+               
                 // Favorite Button
                 Button {
                     print("Favorite")
@@ -33,26 +58,25 @@ struct LyriPicModalView: View {
                         .font(.system(size: 20))
                 }
             }
-            .padding(.trailing, 30)
+            .padding(.horizontal, 30)
             
             Spacer()
             
-            VStack {
+            VStack(spacing: 20) {
                 Text(lyriPic.lyrics)
-                    .font(.system(.body, design: .default))
+                    .font(.system(size: 20, weight: .heavy, design: .default))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Spacer()
-                
+
                 HStack {
                     Spacer()
                     VStack(alignment: .leading) {
                         Text("\(lyriPic.track.trackName),")
+                            .font(.system(size: 15, weight: .medium, design: .default))
                         Text(lyriPic.track.artistName)
-                            .bold()
+                            .font(.system(size: 15, weight: .heavy, design: .default))
                     }
-                    .font(.system(size: 15, weight: .regular, design: .default))
                     .foregroundColor(.white)
                 }
             }
@@ -60,8 +84,9 @@ struct LyriPicModalView: View {
             .padding(.horizontal, 15)
             .padding(.bottom, 15)
             .frame(maxWidth: .infinity)
-            .background(Color(#colorLiteral(red: 1, green: 0.737254902, blue: 0.01960784314, alpha: 1)))
-            .shadow(color: Color(#colorLiteral(red: 1, green: 0.737254902, blue: 0.01960784314, alpha: 1)).opacity(0.2), radius: 4, x: 0, y: 5)
+            .background(backgroundColor)
+            
+            Spacer()
         }
         .padding(.top, 20)
     }
