@@ -12,10 +12,12 @@ struct SearchController: UIViewControllerRepresentable {
     @Binding var searchQuery: String
     
     private let searchButtonClicked: () -> Void
+    private let cancelButtonClicked: () -> Void
     
-    init(searchQuery: Binding<String>, searchButtonClicked: @escaping () -> Void) {
+    init(searchQuery: Binding<String>, searchButtonClicked: @escaping () -> Void, cancelButtonClicked: @escaping () -> Void) {
         self._searchQuery = searchQuery
         self.searchButtonClicked = searchButtonClicked
+        self.cancelButtonClicked = cancelButtonClicked
     }
     
     class Coordinator: NSObject, UISearchBarDelegate {
@@ -38,7 +40,7 @@ struct SearchController: UIViewControllerRepresentable {
         }
         
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-            print("cancelButtonClicked")
+            parent.cancelButtonClicked()
         }
         
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -60,18 +62,15 @@ struct SearchController: UIViewControllerRepresentable {
     }
     
     class SearchControllerWrapper: UIViewController {
-  
-        override func viewDidAppear(_ animated: Bool) {
+ 
+        override func viewWillAppear(_ animated: Bool) {
             self.parent?.navigationController?.navigationBar.sizeToFit()
+            self.parent?.navigationItem.searchController = searchController
         }
         
         var searchController: UISearchController? {
-            get {
-                self.parent?.navigationItem.searchController
-            }
-            
-            set {
-                self.parent?.navigationItem.searchController = newValue
+            didSet {
+                self.parent?.navigationItem.searchController = searchController
             }
         }
     }
