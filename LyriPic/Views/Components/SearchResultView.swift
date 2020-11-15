@@ -17,7 +17,7 @@ struct SearchResultsView: View {
         } else {
             if searchTrackViewModel.tracks != nil && searchTrackViewModel.error == nil {
                 List(searchTrackViewModel.tracks!.message.body.trackList) { track in
-                    TrackCellView(id: 1, track: track)
+                    TrackCellView(track: track)
                 }
                 .listStyle(PlainListStyle())
             } else if searchTrackViewModel.tracks == nil && searchTrackViewModel.error != nil {

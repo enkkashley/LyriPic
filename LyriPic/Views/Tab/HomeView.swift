@@ -43,7 +43,7 @@ struct HomeView: View {
                 if topTracks.error == nil && !topTracks.tracks.isEmpty {
                     VStack(spacing: 10) {
                         ForEach(topTracks.tracks.indices, id: \.self) { index in
-                            TrackCellView(id: index, track: topTracks.tracks[index])
+                            TrackCellView(track: topTracks.tracks[index])
                                 .padding(.horizontal, 20)
                             Divider()
                         }
