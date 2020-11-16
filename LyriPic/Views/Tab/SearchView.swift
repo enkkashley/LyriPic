@@ -11,7 +11,6 @@ struct SearchView: View {
     @StateObject var searchTrackViewModel = SearchTrackViewModel()
     
     @State private var searchQuery = ""
-    @State private var page = 1
     
     var body: some View {
         NavigationView {
@@ -24,7 +23,7 @@ struct SearchView: View {
                 SearchController(
                     searchQuery: $searchQuery,
                     searchButtonClicked: {
-                        searchTrackViewModel.search(searchQuery: searchQuery, page: page)
+                        searchTrackViewModel.search(searchQuery: searchQuery)
                     },
                     cancelButtonClicked: {
                         searchQuery = ""

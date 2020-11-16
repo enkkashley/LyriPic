@@ -5,6 +5,10 @@
 //  Created by Emmanuel Ashley on 10/11/2020.
 //
 
+// Resources
+// https://github.com/thislooksfun/SwiftlySearch
+// https://github.com/markvanwijnen/NavigationSearchBar
+
 import SwiftUI
 
 struct SearchController: UIViewControllerRepresentable {

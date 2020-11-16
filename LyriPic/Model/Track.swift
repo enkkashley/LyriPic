@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Track: Identifiable, Decodable {
+struct Track: Equatable, Identifiable, Decodable {
     let id = UUID()
     let track: TrackInfo
+    
+    static func ==(lhs: Track, rhs: Track) -> Bool {
+        lhs.id == rhs.id
+    }
 }

@@ -21,6 +21,7 @@
 		326DE4802523BAB400CBBC54 /* LyriPicModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */; };
 		328C270825192B8400C61770 /* LyriPicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C270725192B8400C61770 /* LyriPicCardView.swift */; };
 		32B857AD251BFCDE000730B3 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B857AC251BFCDE000730B3 /* TrackCellView.swift */; };
+		32BE430525631BEB000E91BD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE430425631BEB000E91BD /* TestView.swift */; };
 		32D1EDFF251EB88100426BC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1EDFE251EB88100426BC7 /* NetworkManager.swift */; };
 		32D1EE03251F536D00426BC7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1EE02251F536C00426BC7 /* Endpoint.swift */; };
 		32D1EE07251F53E900426BC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1EE06251F53E900426BC7 /* Constants.swift */; };
@@ -53,6 +54,7 @@
 		326DE47F2523BAB300CBBC54 /* LyriPicModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicModalView.swift; sourceTree = "<group>"; };
 		328C270725192B8400C61770 /* LyriPicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCardView.swift; sourceTree = "<group>"; };
 		32B857AC251BFCDE000730B3 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
+		32BE430425631BEB000E91BD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		32D1EDFE251EB88100426BC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32D1EE02251F536C00426BC7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		32D1EE06251F53E900426BC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				32E9EBAC25190F09000789CB /* HomeView.swift */,
 				32FCE19A2559C530006ED89E /* SearchView.swift */,
 				32FCE19D2559C6EE006ED89E /* TabBar.swift */,
+				32BE430425631BEB000E91BD /* TestView.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BE430525631BEB000E91BD /* TestView.swift in Sources */,
 				32FCE19E2559C6EE006ED89E /* TabBar.swift in Sources */,
 				324F769C256063FB0094056E /* SearchResultView.swift in Sources */,
 				32D1EE03251F536D00426BC7 /* Endpoint.swift in Sources */,
