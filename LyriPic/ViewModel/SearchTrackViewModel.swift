@@ -10,6 +10,7 @@ import Foundation
 class SearchTrackViewModel: ObservableObject {
     @Published var tracks = [Track]()
     @Published var error: NetworkError?
+    @Published var totalTracksFound: Int!
     @Published var isLoading = false
     
     var searchQuery: String!
@@ -38,6 +39,7 @@ class SearchTrackViewModel: ObservableObject {
     
     func handleSuccess(_ response: SearchTrack) {
         let trackList = response.message.body.trackList
+        totalTracksFound = response.message.header.available
         
         if page == 1 {
             tracks = trackList
@@ -70,11 +72,16 @@ class SearchTrackViewModel: ObservableObject {
     }
     
     func reset() {
-        if !tracks.isEmpty || error != nil {
-            tracks = []
-            error = nil
-            page = 1
-            hasMoreTracks = false
+        if totalTracksFound == 0 {
+            totalTracksFound = nil
+        } else {
+            if !tracks.isEmpty || error != nil {
+                tracks = []
+                error = nil
+                totalTracksFound = nil
+                page = 1
+                hasMoreTracks = false
+            }
         }
     }
 }

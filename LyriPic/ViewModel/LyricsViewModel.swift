@@ -13,8 +13,6 @@ class LyricsViewModel: ObservableObject {
     var lyrics: TrackLyricsInfo?
     var error: NetworkError?
     
-    var tracks: [Track]?
-    
     func getTrackLyrics(trackId: Int, completion: @escaping () -> Void) {
         NetworkManager.shared.getTrackLyrics(trackId: trackId) { [weak self] result in
             guard let self = self else { return }
@@ -26,17 +24,16 @@ class LyricsViewModel: ObservableObject {
             case .failure(let error):
                 self.error = error
             }
-            
+        
             completion()
         }
     }
     
-    func getLyricsAndSlice() {
-        guard let tracks = tracks else { return }
-    
-        tracks.forEach { track in
+    func getLyricsAndSlice(from track: Track) {
             // make request
             getTrackLyrics(trackId: track.track.trackId) {
+                // TODO: check if request was successful or not
+                
                 // slice lyrics
                 let slicedLyrics = self.lyrics!.lyricsBody.components(separatedBy: "\n\n")
                 // create LyriPicCard object
@@ -47,6 +44,5 @@ class LyricsViewModel: ObservableObject {
                     }
                 }
             }
-        }
     }
 }

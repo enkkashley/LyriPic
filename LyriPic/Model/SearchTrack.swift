@@ -11,6 +11,11 @@ struct SearchTrack: Decodable {
     let message: Response
     
     struct Response: Decodable {
+        let header: MessageHeader
         let body: TrackList
+    }
+    
+    struct MessageHeader: Decodable {
+        let available: Int
     }
 }

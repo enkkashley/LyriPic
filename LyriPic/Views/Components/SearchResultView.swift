@@ -15,26 +15,29 @@ struct SearchResultsView: View {
         if searchTrackViewModel.isLoading {
             ProgressView()
         } else {
-            if !searchTrackViewModel.tracks.isEmpty && searchTrackViewModel.error == nil {
-                if searchTrackViewModel.tracks.isEmpty {
-                    Text("No tracks found.")
-                } else {
-                    List(searchTrackViewModel.tracks) { track in
-                        NavigationLink(destination: Text("Hi")) {
-                            TrackCellView(track: track)
-                                .onAppear {
-                                    searchTrackViewModel.loadMoreTracksIfNeeded(currentTrack: track)
-                                }
-                        }
-                    }
-                    .listStyle(PlainListStyle())
-                }
-            } else if searchTrackViewModel.tracks.isEmpty && searchTrackViewModel.error != nil {
-                Text("Error: \(searchTrackViewModel.error!.rawValue)")
-            } else {
+
+            if searchTrackViewModel.totalTracksFound == nil {
                 Text("Search for track by artist name, song title or lyrics")
                     .frame(width: 241)
                     .multilineTextAlignment(.center)
+                
+            } else if searchTrackViewModel.totalTracksFound == 0 {
+                Text("No tracks found.")
+                
+            } else {
+                List(searchTrackViewModel.tracks) { track in
+                    NavigationLink(destination: TrackLyriPicCards(track)) {
+                        TrackCellView(track: track)
+                            .onAppear {
+                                searchTrackViewModel.loadMoreTracksIfNeeded(currentTrack: track)
+                            }
+                    }
+                }
+                .listStyle(PlainListStyle())
+            }
+            
+            if searchTrackViewModel.error != nil {
+                Text("Error: \(searchTrackViewModel.error!.rawValue)")
             }
         }
     }
