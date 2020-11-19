@@ -11,6 +11,8 @@
 		32085DC2255C5A09004816C3 /* SearchTrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32085DC1255C5A08004816C3 /* SearchTrackViewModel.swift */; };
 		321865572559CE48000955B0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321865562559CE48000955B0 /* SearchBar.swift */; };
 		3224B64E2565A43500DC29A1 /* TrackLyriPicCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224B64D2565A43500DC29A1 /* TrackLyriPicCards.swift */; };
+		322B1C0325669FEF0077D04C /* LyriPicCardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B1C0225669FEF0077D04C /* LyriPicCardColor.swift */; };
+		322B1C072566A05D0077D04C /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B1C062566A05D0077D04C /* Color+ext.swift */; };
 		323F8CB0255AB6C80056472F /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323F8CAF255AB6C80056472F /* SearchController.swift */; };
 		324F769C256063FB0094056E /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F769B256063FB0094056E /* SearchResultView.swift */; };
 		3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253F0E6251BC1DF00C89C9D /* HeaderView.swift */; };
@@ -45,6 +47,8 @@
 		32085DC1255C5A08004816C3 /* SearchTrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrackViewModel.swift; sourceTree = "<group>"; };
 		321865562559CE48000955B0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3224B64D2565A43500DC29A1 /* TrackLyriPicCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLyriPicCards.swift; sourceTree = "<group>"; };
+		322B1C0225669FEF0077D04C /* LyriPicCardColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyriPicCardColor.swift; sourceTree = "<group>"; };
+		322B1C062566A05D0077D04C /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
 		323F8CAF255AB6C80056472F /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		324F769B256063FB0094056E /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		3253F0E6251BC1DF00C89C9D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 				321865562559CE48000955B0 /* SearchBar.swift */,
 			);
 			path = Representables;
+			sourceTree = "<group>";
+		};
+		322B1C052566A0480077D04C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				322B1C062566A05D0077D04C /* Color+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3253F0E5251BC1A300C89C9D /* Tab */ = {
@@ -151,6 +163,7 @@
 				326DE46E25214FF100CBBC54 /* TrackLyrics.swift */,
 				326DE4712521502800CBBC54 /* TrackLyricsInfo.swift */,
 				326DE47B2522509300CBBC54 /* LyriPicCard.swift */,
+				322B1C0225669FEF0077D04C /* LyriPicCardColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				32E9EBAA25190F09000789CB /* LyriPicApp.swift */,
+				322B1C052566A0480077D04C /* Extensions */,
 				32D1EE05251F53D400426BC7 /* Utilities */,
 				32D1EE20251FF59900426BC7 /* Manager */,
 				32D1EE0E251FB29800426BC7 /* Model */,
@@ -311,6 +325,7 @@
 				3253F0E7251BC1DF00C89C9D /* HeaderView.swift in Sources */,
 				32D1EE1E251FBFBD00426BC7 /* TopTracksViewModel.swift in Sources */,
 				321865572559CE48000955B0 /* SearchBar.swift in Sources */,
+				322B1C072566A05D0077D04C /* Color+ext.swift in Sources */,
 				32085DBE255AF2C3004816C3 /* SearchTrack.swift in Sources */,
 				326DE475252158A300CBBC54 /* LyricsViewModel.swift in Sources */,
 				32D1EE14251FB60F00426BC7 /* TrackList.swift in Sources */,
@@ -319,6 +334,7 @@
 				32D1EE10251FB31400426BC7 /* TopTracks.swift in Sources */,
 				32D1EE0B251FB14C00426BC7 /* NetworkError.swift in Sources */,
 				32D1EE07251F53E900426BC7 /* Constants.swift in Sources */,
+				322B1C0325669FEF0077D04C /* LyriPicCardColor.swift in Sources */,
 				32D1EE17251FB64100426BC7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

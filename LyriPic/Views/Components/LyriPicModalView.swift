@@ -92,8 +92,8 @@ struct LyriPicModalView: View {
     }
 }
 
-struct LyriPicModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        LyriPicModalView(lyriPic: LyriPicCard(track: TrackInfo(trackId: 2, trackName: "As It Is In Heaven", artistName: "Hillsong UNITED"), lyrics: "Loading..."))
-    }
-}
+//struct LyriPicModalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LyriPicModalView(lyriPic: LyriPicCard(track: TrackInfo(trackId: 2, trackName: "As It Is In Heaven", artistName: "Hillsong UNITED"), lyrics: "Loading..."))
+//    }
+//}

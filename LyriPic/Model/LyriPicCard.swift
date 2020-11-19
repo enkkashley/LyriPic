@@ -11,4 +11,5 @@ struct LyriPicCard: Identifiable {
     let id = UUID()
     let track: TrackInfo
     let lyrics: String
+    let color: LyriPicCardColor
 }
