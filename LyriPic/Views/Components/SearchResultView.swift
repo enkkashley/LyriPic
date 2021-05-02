@@ -26,7 +26,7 @@ struct SearchResultsView: View {
                 
             } else {
                 List(searchTrackViewModel.tracks) { track in
-                    NavigationLink(destination: TrackLyriPicCards(track)) {
+                    NavigationLink(destination: TrackLyriPicCardsView(track)) {
                         TrackCellView(track: track)
                             .onAppear {
                                 searchTrackViewModel.loadMoreTracksIfNeeded(currentTrack: track)

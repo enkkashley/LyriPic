@@ -1,5 +1,5 @@
 //
-//  TrackLyriPicCards.swift
+//  TrackLyriPicCardsView.swift
 //  LyriPic
 //
 //  Created by Emmanuel Ashley on 18/11/2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrackLyriPicCards: View {
+struct TrackLyriPicCardsView: View {
     
     @ObservedObject var lyricsViewModel = LyricsViewModel()
     
